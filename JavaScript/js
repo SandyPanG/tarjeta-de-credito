@@ -1,1 +1,15 @@
 var enterNum = prompt("Ingresa tu número de tarjeta de crédito");
+var creditNumberReverse = (enterNum.split("")).reverse();// revirtiendo el numero dado
+var pairNum = [];// separar numeros pares de la tc
+
+  for (var k = 0; k< creditNumberReverse.length; i++) {
+
+  }
+
+function validCard (enterNum) {
+  for (var i =0; i <= enterNum.length; i++){
+    if (i % 2 !== 0){
+      var product =
+    }
+  }
+}
