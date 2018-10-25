@@ -1,13 +1,10 @@
-var credCard = prompt("Ingresa tu número de tarjeta de crédito");
+var credCard = "";
 
-function itsWrong (credCard) {
-  
-  while(credCard == '' || credCard == null){
-		credCard = prompt('Por favor ingresa un numero de tarjeta');
-	} // termina while
+do {
+  credCard = prompt("Ingresa tu numero de Tarjeta de Credito a 16 digitos \n sin espacios."); // Aquí se da al usuario las instrucciones para que ingrese su número de T.C. 
+}
 
-	return credCard;
-};
+	while( !credCard || !/^[0-9]*$/.test(credCard));
 
 // function isValidCard (num) {
 //   var array = [];
