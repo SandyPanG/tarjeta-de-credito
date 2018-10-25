@@ -26,16 +26,24 @@ function isValidCard (card) {
             multiply = Math.floor(multiply/10);//se redonde ahacia abajo a su mas cercano entero
 
           }
+      pairNum.push(sumPair);//array de números par
 
-        }
+      } else {
+        pairNum.push(multiply);//resultados de solo un entero se pasan al array pairNum
+      } 
+      }else {
+        pairNum.push(parseInt(reverseArray[i]));// se integran los impares al array y deja de ser string, ahora es dato númerico
+      }
     }
-  }
+  
   
   console.log(newArray);
   console.log(reverseArray);
   console.log(sumPair);
+  console.log(pairNum);
   
   
   
-    };
+  
+    }
 
