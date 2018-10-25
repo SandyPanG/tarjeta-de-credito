@@ -14,7 +14,7 @@ function isValidCard (card) {
 	var reverseArray = (credCard.split("")).reverse();//colocando al revés el array
 	var pairNum = [];//Guarda números pares del array
 	var sumPair = 0;
-  var newMultArray = [];
+  var lastToValidate = 0;
   
   for(var i = 0; i < credCard.length; i++) {//se inicia for que recorre array
     if (i % 2 !== 0) {//se inicia "if" para identificar numeros impares
@@ -34,6 +34,16 @@ function isValidCard (card) {
       }else {
         pairNum.push(parseInt(reverseArray[i]));// se integran los impares al array y deja de ser string, ahora es dato númerico
       }
+
+  for (var l = 0; l < pairNum.length; l++) {//recorre las posiciones pares
+    lastToValidate += pairNum[l];//suma y guarda los numeros de pairNum
+  }
+
+  if (lastToValidate % 10 === 0) {//se aplica algoritmo de Luhn, se busca que el residuo de todos los números sea cero para obtener una tarjeta válida
+    return document.getElementById("result").innerHTML = "VÁLIDA";
+  } else {
+    return document.getElementById("result").innerHTML = "NO VALIDA";
+  }
     }
   
   
@@ -41,6 +51,8 @@ function isValidCard (card) {
   console.log(reverseArray);
   console.log(sumPair);
   console.log(pairNum);
+  console.log(lastToValidate);
+  
   
   
   
