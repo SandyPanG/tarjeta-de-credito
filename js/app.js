@@ -12,12 +12,29 @@ do {
 function isValidCard (card) {
   var newArray = (credCard.split(""));//convirtiendo en array el número ingresado
 	var reverseArray = (credCard.split("")).reverse();//colocando al revés el array
-	var posPair = [];
+	var pairNum = [];//Guarda números pares del array
 	var sumPair = 0;
-	var newMultArray = [];
+  var newMultArray = [];
+  
+  for(var i = 0; i < credCard.length; i++) {//se inicia for que recorre array
+    if (i % 2 !== 0) {//se inicia "if" para identificar numeros impares
+      var multiply = reverseArray[i]*2;//Multiplica por dos los números en posición par
+        if(multiply >= 10) {//indica que si el resultado de la multiplicación es mayor a 10...
+
+          while (multiply) {//suma los digitos hasta que sólo quede un número de un dígito
+            sumPair += multiply % 10;
+            multiply = Math.floor(multiply/10);//se redonde ahacia abajo a su mas cercano entero
+
+          }
+
+        }
+    }
+  }
   
   console.log(newArray);
   console.log(reverseArray);
+  console.log(sumPair);
+  
   
   
     };
