@@ -10,13 +10,13 @@ do {
 
 /**************Función que prueba si el número es válido************/ 
 function isValidCard (card) {
-  var array = (credCard.split(""));//convirtiendo en array el número ingresado
-	var reverseArray = array.reverse();//colocando al revés el array
+  var newArray = (credCard.split(""));//convirtiendo en array el número ingresado
+	var reverseArray = (credCard.split("")).reverse();//colocando al revés el array
 	var posPair = [];
 	var sumPair = 0;
 	var newMultArray = [];
   
-  console.log(array);
+  console.log(newArray);
   console.log(reverseArray);
   
   
