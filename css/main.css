@@ -1,3 +1,33 @@
 body {
-    background-color: gray;
+    background-color: #0f254e;
 }
+
+.navbar-light .navbar-brand {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.h1 {
+    color: white;
+    margin-top: 10vh;
+}
+.h2 {
+    color: white;
+}
+
+.info {
+    background-color: #019271;
+    margin: 10vh 10vh;
+}
+
+#numero {
+    color:#fcbe01;
+}
+
+#result {
+    color: #fe0000;
+}
+
